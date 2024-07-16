@@ -1,0 +1,26 @@
+[Added Associations]
+application/x-compressed-tar=ark-2.desktop;ark.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-18J5P2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-18J5P2.desktop;
+image/png=yazi.desktop;org.xfce.ristretto.desktop;
+image/jpeg=org.xfce.ristretto.desktop;
+application/x-zstd-compressed-tar=org.kde.ark.desktop;
+text/x-log=neovide.desktop;
+text/css=neovide.desktop;
+application/x-shellscript=neovide.desktop;
+application/x-zerosize=neovide.desktop;
+text/plain=neovide.desktop;
+
+[Default Applications]
+application/x-compressed-tar=ark-2.desktop;
+x-scheme-handler/clash=clash-verge.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-18J5P2.desktop
+message/rfc822=userapp-Thunderbird-18J5P2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-18J5P2.desktop
+image/png=org.xfce.ristretto.desktop
+image/jpeg=org.xfce.ristretto.desktop
+application/x-zstd-compressed-tar=org.kde.ark.desktop
+text/x-log=neovide.desktop
+text/css=neovide.desktop
+application/x-zerosize=neovide.desktop
