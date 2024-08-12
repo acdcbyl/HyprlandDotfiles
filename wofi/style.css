@@ -6,7 +6,8 @@
 
 window {
   border: 3px solid #cba6f7;;
-  background: #1e1e2e;
+  /* background: #1e1e2e; */
+  background-color: rgba(30, 30, 46, 0.8);
   border-radius: 15px;
 }
 
@@ -17,7 +18,7 @@ window {
   border: none;
   font-weight: bold;
   border: 1px solid transparent;
-  background: #1e2030;
+  background: rgba(30, 32, 48, 0.8);
   color: #c4d3da;
   border-radius: 15px;
 }

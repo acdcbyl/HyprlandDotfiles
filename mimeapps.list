@@ -9,7 +9,7 @@ text/x-log=neovide.desktop;
 text/css=neovide.desktop;
 application/x-shellscript=neovide.desktop;
 application/x-zerosize=neovide.desktop;
-text/plain=neovide.desktop;
+text/plain=dev.zed.Zed.desktop;neovide.desktop;
 
 [Default Applications]
 application/x-compressed-tar=ark-2.desktop;
@@ -24,3 +24,4 @@ application/x-zstd-compressed-tar=org.kde.ark.desktop
 text/x-log=neovide.desktop
 text/css=neovide.desktop
 application/x-zerosize=neovide.desktop
+x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop

@@ -1,0 +1,34 @@
+mpd_music_dir = /home/aiser/Music/
+ncmpcpp_directory = ~/.ncmpcpp
+lyrics_directory = ~/.ncmpcpp/lyrics
+
+
+visualizer_in_stereo = "no"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "10"
+visualizer_type = "spectrum" #spectrum/wave/wave_filled/ellipse
+
+
+autocenter_mode = yes
+message_delay_time = "1"
+song_list_format = "{{%a %t}|{%f}}{$R%l}"
+current_item_prefix = $b$7
+current_item_inactive_column_prefix = $b$(white)$r
+now_playing_prefix = "$b$3"
+now_playing_suffix = "$b$9"
+main_window_color = white
+
+playlist_display_mode = "classic"
+user_interface = classic
+header_visibility = "no"
+statusbar_visibility = "no"
+titles_visibility = "no"
+
+mouse_support = "yes"
+
+follow_now_playing_lyrics = yes
+fetch_lyrics_for_current_song_in_background = yes
+
+progressbar_look = "▃▃ "
+progressbar_elapsed_color = "magenta"

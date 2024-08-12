@@ -4,7 +4,6 @@ joplin-desktop/
 microsoft-edge/
 obs-studio/
 obsidian/
-rofi/
 wezterm/
 vlc/
 spotify/
@@ -31,3 +30,6 @@ rncbc.org/
 ristretto/
 luakit/
 cef_user_data/
+ags/
+chromium/
+qutebrowser/

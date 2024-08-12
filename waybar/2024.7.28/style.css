@@ -1,0 +1,197 @@
+/* # By knightfall01 on Github as a part of https://github.com/Knightfall01/Hyprland-config */
+@import "mocha.css";
+
+* {
+  /* border: none;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 16px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 30px; */
+
+  margin: 0;
+  padding: 0;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  /* height: 30px; */
+}
+#window {
+    font-weight: bold;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#custom-arch, #workspaces {
+  border-radius: 10px;
+  background-color: @base;
+  color: #c0caf5;
+  margin-top: 10px;
+	margin-right: 15px;
+	/* margin-left: 15px; */
+  padding-top: 1px;
+  /* padding-left: 10px; */
+  padding-right: 0px;
+}
+
+#custom-arch {
+  font-size: 20px;
+	margin-left: 15px;
+	padding-right: 8px;
+}
+
+/* #workspaces button {
+  background: @base;
+  color: #c0caf5;
+
+}
+
+#workspaces button.active {
+  color: #2ac3de;
+} */
+
+#workspaces button:nth-child(1) label {
+   color: #8aadf4;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(2) label {
+   color: #ed8796;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(3) label {
+   color: #a6da95;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(4) label {
+   color: #c6a0f6;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(5) label {
+   color: #f4dbd6;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(6) label {
+   color: #f5a97f;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(7) label {
+   color: #8bd5ca;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(8) label {
+   color: #68b0d6;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+
+ #workspaces button:nth-child(9) label {
+   color: #aab1d3;
+   margin: 0px 0px;
+   background-color: transparent;
+ }
+ #workspaces button:hover label {
+   padding: 0 0px;
+   margin: 0;
+}
+ #workspaces button {
+   padding: 0 0px;
+   padding-left: 2px;
+   margin: 0;
+   border: none;
+   transition: none;
+}
+#workspaces button:hover {
+   margin: 0px 0px;
+   box-shadow: none;
+   text-shadow: none;
+   background: none;
+   transition: none;
+   border: none;
+   outline: none;
+}
+button:hover {
+   margin: 0px 0px;
+   box-shadow: none;
+   text-shadow: none;
+   background: none;
+   transition: none;
+}
+
+#custom-brightness,#clock, #backlight, #custom-cava,#temperature, #cpu, #pulseaudio, #network, #battery , #tray, #memory ,#custom-playerctl{
+  border-radius: 10px;
+  background-color: @base;
+  color: #c0caf5;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 15px;
+}
+tooltip {
+    background: @base;
+    border: 1px solid @pink;
+    border-radius: 0.5rem;
+}
+
+tooltip label {
+    color: @text;
+}
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+#battery.warning:not(.charging) {
+  background: #f38ba8;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* #pulseaudio { */
+/*   font-size: 20px; */
+/* 	margin-left: 15px; */
+/* } */
+
+/* #tray{
+  padding-right: 0px;
+  padding-left: 10px;
+} */
+#tray menu {
+    color: @text;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #1a1c2b;  /* 使用与其他模块相同的背景色 */
+    border: 2px solid #6e738d;  /* 添加边框以增加可见性 */
+    border-radius: 5px 5px 5px 5px;
+}
+/* #pulseaudio { */
+/*   border-radius: 10px; */
+/*   background-color: #11111b; */
+/*   color: #cba6f7; */
+/*   margin-top: 15px; */
+/* 	margin-right: 15px; */
+/*   padding-top: 1px; */
+/*   padding-left: 10px; */
+/*   padding-right: 10px; */
+/* } */

@@ -1,0 +1,390 @@
+// =============================================================================
+//
+// Waybar configuration
+//
+// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+//
+// =============================================================================
+
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+    "spacing": 0,
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 55,
+    //左边部分
+    "modules-left": [
+        "custom/icon",
+        "custom/separator",
+
+
+        "hyprland/workspaces"
+
+
+
+
+    //    "custom/filler"
+
+
+
+    ],
+    "modules-center": [
+        // "cava",
+        //"clock#time",
+        //"custom/fillerl",
+        "custom/playerctl"
+
+        //"custom/filler"
+
+    ],
+    "modules-right": [
+       "tray",
+      "custom/dot",
+      "cpu",
+      "network",
+      //"memory",
+      "custom/brightness",
+        "disk",
+      "temperature",
+
+       //"custom/ddcutil",
+        // "battery",
+         //"custom/dot",
+        //"bluetooth",
+
+        //"custom/dot",
+
+        //"clock#date",
+
+        "custom/dot",
+        "pulseaudio",
+        "pulseaudio/slider",
+        "custom/dot",
+        "custom/separator",
+        "custom/power"
+
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+    "custom/brightness": {
+           "format": "{icon}",
+           "format-icons": ["󰃚 ", "󰃛 ", "󰃜 ", "󰃝 ", "󰃞 ", "󰃟 ", "󰃠 "],
+           //"exec": "brightnessctl -m | awk -F, '{print substr($4, 1, length($4)-1)}'",
+           "exec": "/home/aiser/.config/waybar/script/brightctl.sh",
+           "exec-if": "which brightnessctl",
+           "interval": 1,
+           "on-scroll-up": "brightnessctl set +5%",
+           "on-scroll-down": "brightnessctl set 5%-",
+           "on-click": "brightnessctl set 100%",
+           "on-click-right": "brightnessctl set 5%",
+           "tooltip":true,
+           "tooltip-format":"{percentage:3} %",
+            "return-type": "json"
+       },
+    "cava": {
+    //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+            "framerate": 30,
+            "autosens": 1,
+            "sensitivity": 100,
+            "bars": 14,
+            "lower_cutoff_freq": 50,
+            "higher_cutoff_freq": 10000,
+            "method": "pulse",
+            "source": "auto",
+            "stereo": true,
+            "reverse": false,
+            "bar_delimiter": 0,
+            "monstercat": false,
+            "waves": false,
+            "noise_reduction": 0.77,
+            "input_delay": 2,
+            "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+            "actions": {
+                       "on-click-right": "mode"
+                       }
+        },
+
+    "clock#date": {
+        "interval": 10,
+        // "format": " {:%a %b %e %Y}",
+        "format": " {:%a}", // Icon: calendar-alt
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "on-click-right": "mode",
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_down",
+            "on-scroll-down": "shift_up"
+        }
+
+    },
+
+    "clock#time": {
+        "interval": 1,
+        "format": " {:%H:%M}",
+        "tooltip": false
+    },
+
+    "keyboard-state": {
+        "numlock": false,
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "unlocked": "",
+            "locked": "󰘶 Caps"
+        }
+    },
+
+    "battery": {
+    "bat": "BAT1",
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " {icon}",
+    "format-charging": "󰂄",
+    "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+    "max-length": 25,
+    "tooltip": true,
+    "tooltip-format": "{capacity}%"
+  },
+
+    "bluetooth": {
+        "format": "{status}",
+        "format-disabled": "󰂲 Disabled", // an empty format will hide the module
+        "format-connected": "󰂱 {num_connections}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        //"format-bluetooth": "{icon} {volume:3}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": "󱝉 ",
+            "headset": "󰋍 ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " "]
+        },
+        "tooltip-format": "{volume:3}% 当前设备：{desc}",
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": "{icon}", // Icon: microchip {usage:3}%
+        "states": {
+          "warning": 20,
+          "critical": 50
+        },
+        "format-icons": [
+            " ",
+            " ",
+            " "
+        ],
+        "on-click": "kitty -e btm"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "interval": 1,
+        "format": "{icon}",
+        "format-icons": [
+            "", // Icon: temperature-empty
+            "", // Icon: temperature-quarter
+            "", // Icon: temperature-half
+            "", // Icon: temperature-three-quarters
+            ""  // Icon: temperature-full
+        ],
+        "tooltip": true,
+        "on-click": "kitty -e btm"
+    },
+
+    "memory": {
+        "interval": 1,
+        "format": "󰍛 ", // Icon: memory
+        "states": {
+            "warning": 20,
+            "critical": 50
+        },
+        "tooltip-format": "{percentage:3}% 详情：{used:0.1f}GiB / {total:0.1f}GiB",
+        "on-click": "kitty -e btm"
+    },
+
+    "network": {
+        "interval": 1,
+        "format-wifi": "{icon}", // Icon: wifi
+        "format-icons": ["󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+        "format-ethernet": "󰀂 ", // Icon: ethernet {bandwidthTotalBytes:>12}
+        "format-disconnected": "󰯡 ",
+        "tooltip-format": "{bandwidthTotalBytes:>12} {ifname}: {ipaddr}",
+        "on-click": "iwgtk"
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": " ",
+        "path": "/",
+        "tooltip-format": "{percentage_free}% 详情：{used} / {total}",
+        "on-click": "thunar"
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "hyprland/workspaces": {
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+           "*": 6
+        },
+    "format-icons": {
+      "1": "   ",
+      "2": "   ",
+      "3": "   ",
+      "4": "   ",
+      "5": "   ",
+      "6": "   ",
+      "7": "   ",
+      "8": "   ",
+      "9": "   ",
+      "urgent": "   ",
+      "active": "   ",
+      "default": "   "
+    }
+  },
+  "custom/playerctl": {
+      "format": "{}",
+      "return-type": "json",
+      "interval": 1,
+      "max-length": 20,
+      //"exec": "playerctl -a metadata --format '{\"text\": \"{{title}}\"}' -F",
+      "exec": "/home/aiser/.config/waybar/script/playctl.sh",
+      "on-click": "playerctl play-pause",
+      "on-click-middle": "playerctl previous",
+      "on-click-right": "playerctl next",
+      "tooltip":true,
+      "escape": true
+    },
+  "custom/dot": {
+    "format": " ",
+    "tooltip":false
+  },
+  "custom/right-arr": {
+    "format": "  "
+  },
+  "custom/separator": {
+    "format": " "
+  },
+  "custom/ddc_brightness": {
+        // I don't even want to know why this works.
+        // Change it to the following for your custom icons,
+        // current format is a hack for Material Symbols to display normally:
+        // "format": "{icon} {percentage}%",
+        "format": "<span rise='-2pt' size='12pt'>{icon}</span> <span rise='1pt' size='10pt'>{percentage}%</span>",
+        "format-icons": [
+            // Icons from Google Material Symbols.
+            // Put your icons here.
+            "\ue3a6", "\ue3a7", "\ue3a8", "\ue3a9", "\ue3aa", "\ue3ab", "\ue3ac"
+        ],
+        "exec": "~/.config/waybar/waybar-ddc-module.sh",
+        "return-type": "json",
+        "on-scroll-up": "echo '+' > /tmp/waybar-ddc-module-rx",
+        "on-scroll-down": "echo '-' > /tmp/waybar-ddc-module-rx",
+        "on-click": "echo 'min' > /tmp/waybar-ddc-module-rx",
+        "on-click-right": "echo 'max' > /tmp/waybar-ddc-module-rx",
+        "tooltip": false
+    },
+    "custom/ddcutil": {
+    "format": "{percentage}% {icon}",
+    "interval": 1,
+    "format-icons": ["", "", ""],
+    "exec": "~/.config/waybar/waybar-ddcutil.py",
+    "return-type": "json"
+    },
+    // "hyprland/workspaces": {
+    //     "format": "{id}: {icon}",
+    //     "format-icons": {
+    //         "default": " Work",
+    //         //"1": " Term",
+    //         //"2": " Nvim",
+    //         "2": " Web",
+    //         //"4": "󰇮 Mail",
+    //         "3": "󰭹 Chat",
+    //         "4": "󰨞 Code",
+    //         "5": " DB",
+    //         //"8": " Sys",
+    //         "6": " Fun"
+
+    //     },
+    //     //"persistent-workspaces": {
+    //     //    "*": 6
+    //     //},
+    //     //"on-click": "activate",
+    //     //"on-scroll-up": "hyprctl dispatch workspace e+1",
+    //     //"on-scroll-down": "hyprctl dispatch workspace e-1"
+    // },
+    "custom/icon": {
+        "format":"󰣇",
+        "on-click":"kitty --hold -e fastfetch",
+        "tooltip": false
+    },
+    "hyprland/submap": {
+        "format": " {}",
+        "tooltip": false
+    },
+    "custom/power": {
+        "format":"  {}",
+        "on-click": "wlogout --protocol layer-shell -b 5",
+        "tooltip-format": "电源"
+
+    },
+    "custom/fillerl": {
+    "format": "  [ ",
+    "tooltip": false
+    },
+    "custom/filler": {
+    "format": " ]  ",
+    "tooltip": false
+    }
+}

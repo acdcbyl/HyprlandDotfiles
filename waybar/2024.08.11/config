@@ -1,0 +1,224 @@
+{
+  "layer": "top",
+    "height": 53,
+    "modules-left": ["custom/arch", "hyprland/workspaces" , "cpu","custom/cava"],
+    "modules-center": ["custom/notification","custom/playerctl"],
+    "modules-right": ["custom/brightness","pulseaudio", "battery", "network","clock","tray"],
+    "custom/arch": {
+      "format": "  ",
+      "on-click": "wlogout --protocol layer-shell -b 5",
+      "tooltip": false
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+      "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+    "custom/cava_test": {
+        "format": "{}",
+        "exec": "/home/aiser/.config/waybar/scripts/sound/expand cava-icon"
+    },
+    //"hyprland/workspaces": {
+    //  "format": "{icon}",
+    //  "on-click": "activate",
+    //  "all-outputs": true,
+     // "persistent_workspaces" :{
+     //     "1": [],
+	 //		    "2": [],
+	// 		    "3": [],
+	 //		    "4": [],
+	 //		    "5": [],
+	 //		    "6": [],
+	 //		    "7": [],
+	 //		    "8": [],
+	 //		    "9": [],
+	 //		    "10": []
+     //   },
+      //  "format-icons": {
+      //          "1": " 1 ",
+     //        		"2": " 2 ",
+     //        		"3": " 3 ",
+      //       		"4": " 4 ",
+     //        		"5": " 5 ",
+     //        		"6": " 6 ",
+       //      		"7": " 7 ",
+      //       		"8": " 8 ",
+      //       		"9": " 9 ",
+      //       		"10": " 1〇 "
+       //   }
+    //},
+    "hyprland/workspaces": {
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+           "*": 1
+        },
+    "format-icons": {
+      "1": "   ",
+      "2": "   ",
+      "3": "   ",
+      "4": "   ",
+      "5": "   ",
+      "6": "   ",
+      "7": "   ",
+      "8": "   ",
+      "9": "   ",
+      "urgent": "   ",
+      "active": "   ",
+      "default": "   "
+    }
+  },
+    "clock": {
+      "format": "<span color='#b69bf1'> </span>{:%H:%M}",
+  "format-alt": "<span foreground='#b69bf1'> </span><span>{:%I:%M %p %a %d}</span>",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "calendar": {
+            "mode": "month",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "on-click-right": "mode",
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+    },
+    "custom/cava": {
+        "tooltip": false,
+        "exec": "sleep 3 && cava -p ~/.config/cava/waybar_cava.conf | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;'"
+
+    },
+
+    "backlight": {
+      "device": "amdgpu_b10",
+      "format": "<span color='#d9b172'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "custom/brightness": {
+           //"format": "{icon}",
+           "format": "<span color='#d9b172'>{icon}</span> {percentage:3}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+           //"format-icons": ["󰃚 ", "󰃛 ", "󰃜 ", "󰃝 ", "󰃞 ", "󰃟 ", "󰃠 "],
+           //"exec": "brightnessctl -m | awk -F, '{print substr($4, 1, length($4)-1)}'",
+           "exec": "/home/aiser/.config/waybar/script/brightctl.sh",
+           "exec-if": "which brightnessctl",
+           "interval": 1,
+           "on-scroll-up": "brightnessctl set +5%",
+           "on-scroll-down": "brightnessctl set 5%-",
+           "on-click": "brightnessctl set 100%",
+           "on-click-right": "brightnessctl set 5%",
+           "tooltip":true,
+           "tooltip-format":"{percentage:3} %",
+            "return-type": "json"
+       },
+    "custom/sound": {
+      "format": "<span color='#5d7'> </span>{}",
+      "exec": "custom-alsa.sh",
+    },
+    "network": {
+      "interface": 1,
+      "format-wifi": "<span color='#89b4fa'>{icon}</span> {signalStrength}%", // Icon: wifi
+        "format-icons": ["󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+        "format-ethernet": "󰀂 {signalStrength}%", // Icon: ethernet {bandwidthTotalBytes:>12}
+        "format-disconnected": "<span color='#ff005f'>󰖪 </span>No Network",
+      //"format": "{ifname}",
+      //"format-wifi": "<span color='#90cdfa'> </span>{essid}({signalStrength}%)",
+      //"format-ethernet": "{ipaddr}/{cidr} ",
+      //"format-disconnected": "<span color='#ff005f'>󰖪 </span>No Network",
+      "on-click": "iwgtk"
+    },
+    "battery": {
+      "format": "<span color='#a8cd76'>{icon}</span> {capacity}%",
+      //"format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#a8cd76'></span> {capacity}%"
+    },
+    "pulseaudio": {
+      //"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      //"format": "<span color='#f7768e'> </span> {volume}%",
+      //"format-muted": "<span color='#f7768e'>ﱝ</span>",
+      //"format-icons": {
+       //"headphone": "",
+       //"hands-free": "",
+       //"headset": "",
+       //"phone": "",
+       //"portable": "",
+       //"car": "",
+       //"default": ["奔", "墳"]
+    //},
+    "format": "{icon} {volume}%",
+        //"format-bluetooth": "{icon} {volume:3}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": "󱝉 ",
+            "headset": "󰋍 ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " "]
+        },
+    "on-click-right" : "pavucontrol",
+    //"on-click" : "easyeffects"
+    },
+    "memory": {
+    "format": "<span foreground='#9ece6a'></span> {}%",
+    "on-click": "kitty btm"
+    },
+    "tray": {
+    "icon-size": 18,
+    //"reverse-direction": true,
+    "spacing": 10
+    },
+    "cpu": {
+    "format": "<span foreground='#9ece6a'></span>  {usage}%" //#ff005f
+     },
+     "temperature": {
+    "critical-threshold": 80,
+    "format": "<span foreground='#5d73ca'></span> {temperatureC}°C"
+     },
+    "custom/playerctl": {
+     "format": "<span>{}</span>",
+     "return-type": "json",
+     "max-length": 55,
+     "interval": 1,
+     //"exec": "/home/aiser/.config/waybar/script/playctl.sh"
+     //"exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+     "exec": "/home/aiser/.config/waybar/script/playctl.sh",
+     "on-click-middle": "playerctl previous",
+     "on-click": "playerctl play-pause",
+     "on-click-right": "playerctl next",
+     //"format-icons": {
+       //"Paused": "<span foreground='#bb9af7'></span>",
+       //"Playing": "<span foreground='#bb9af7'></span>"
+     //}
+     }
+
+}

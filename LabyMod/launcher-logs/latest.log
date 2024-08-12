@@ -1,0 +1,234 @@
+[13:46:21] [main] Starting LabyMod Launcher v2.1.5
+[13:46:21] [main] platform: {"name":"linux","version":"6.9.9-arch1-1","arch":"x64"}
+[13:46:21] [main] Working Directory: /home/*****/.config/LabyMod
+[13:46:21] [main] Working directory initialized
+[13:46:21] [main] Started with arguments: /tmp/.mount_labymon1AYx0/labymodlauncher
+[13:46:21] [main] Parsed quick launch arguments: undefined undefined undefined
+[13:46:21] [main] Environment Variables: 
+[13:46:21] [main] {"SHELL":"/usr/bin/zsh","HYPRLAND_CMD":"Hyprland","XDG_SESSION_PATH":"/org/freedesktop/DisplayManager/Session3","GLFW_IM_MODULE":"ibus","XDG_BACKEND":"wayland","ARGV0":"/usr/bin/labymodlauncher","INPUT_METHOD":"fcitx","MOZ_DRM_DEVICE":"/dev/dri/renderD128","XMODIFIERS":"@im=fcitx","LIBVA_DRIVER_NAME":"nvidia","DESKTOP_SESSION":"hyprland","ELECTRON_OZONE_PLATFORM_HINT":"auto","HL_INITIAL_WORKSPACE_TOKEN":"56d35877-5796-4e68-8c28-dfd6eea3c78c","XCURSOR_SIZE":"24","XDG_SEAT":"seat0","PWD":"/home/*****","GSETTINGS_SCHEMA_DIR":"/tmp/.mount_labymon1AYx0/usr/share/glib-2.0/schemas:","XDG_SESSION_DESKTOP":"","LOGNAME":"aiser","QT_QPA_PLATFORMTHEME":"qt5ct","XDG_SESSION_TYPE":"wayland","MOTD_SHOWN":"pam","HOME":"/home/*****","LANG":"zh_CN.UTF-8","__GL_VRR_ALLOWED":"0","_JAVA_AWT_WM_NONREPARENTING":"1","XDG_CURRENT_DESKTOP":"Hyprland","WAYLAND_DISPLAY":"wayland-1","XDG_SEAT_PATH":"/org/freedesktop/DisplayManager/Seat0","APPDIR":"/tmp/.mount_labymon1AYx0","MOZ_DISABLE_RDD_SANDBOX":"1","SDL_IM_MODULE":"fcitx","NVD_BACKEND":"direct","XDG_SESSION_CLASS":"user","VK_DRIVER_FILES":"/usr/share/vulkan/icd.d/nvidia_icd.json","USER":"aiser","OWD":"/home/*****","__GL_GSYNC_ALLOWED":"0","HYPRLAND_INSTANCE_SIGNATURE":"918d8340afd652b011b937d29d5eea0be08467f5_1721278100_1662133145","DISPLAY":":1","SHLVL":"0","MOZ_ENABLE_WAYLAND":"1","QT_IM_MODULE":"fcitx","XDG_VTNR":"1","XDG_SESSION_ID":"5","WLR_DRM_NO_ATOMIC":"1","LD_LIBRARY_PATH":"/tmp/.mount_labymon1AYx0/usr/lib:","APPIMAGE":"/opt/labymodlauncher/labymodlauncher.AppImage","XDG_RUNTIME_DIR":"/run/user/1000","DEBUGINFOD_URLS":"https://debuginfod.archlinux.org ","XDG_DATA_DIRS":"/tmp/.mount_labymon1AYx0/usr/share/:./share/:/usr/share/gnome:/usr/local/share/:/usr/share/::/usr/share/gnome/:/usr/local/share/:/usr/share/","GDK_BACKEND":"wayland,x11,*","PATH":"/tmp/.mount_labymon1AYx0:/tmp/.mount_labymon1AYx0/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl","__GLX_VENDOR_LIBRARY_NAME":"nvidia","GBM_BACKEND":"nvidia-drm","DBUS_SESSION_BUS_ADDRESS":"unix:path=/run/user/1000/bus","MAIL":"/var/spool/mail/aiser","GIO_LAUNCHED_DESKTOP_FILE_PID":"799286","GIO_LAUNCHED_DESKTOP_FILE":"/usr/share/applications/labymodlauncher.desktop","OLDPWD":"/home/*****","HYPRCURSOR_SIZE":"24","CHROME_DESKTOP":"LabyMod Launcher.desktop","ORIGINAL_XDG_CURRENT_DESKTOP":"Hyprland"}
+[13:46:21] [main] Config initialized
+[13:46:21] [main] Modpacks.json does not exist.
+[13:46:21] [main] App is ready
+[13:46:21] [main] RAM: 16153772032
+[13:46:22] [main] i18n initialized
+[13:46:22] [main] Online: true
+[13:46:22] [main] WEB: Fetching GET@https://releases.r2.labymod.net/api/v1/launcher/meta.json with Ipv4
+[13:46:22] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[13:46:23] [renderer] Getting i18n. Preferred languages: zh-CN,zh,zh. Actual language: zh-CN.
+[13:46:23] [main] Setting preferred locales to zh-CN zh zh
+[13:46:23] [main] Using i18n for en
+[13:46:23] [main] Getting minimal view
+[13:46:23] [main] WEB: Fetching GET@https://laby.net/api/v3/web/blog?amount=10&language=en&content=false with Ipv4
+[13:46:23] [main] WEB: Fetching GET@https://laby.net/api/v3/web/blog?amount=10&language=en&content=false with Ipv4
+[13:46:23] [main] WEB: Fetching GET@https://releases.r2.labymod.net/launcher/api/v1/modmeta.json with Ipv4
+[13:46:23] [main] WEB: Fetching GET@https://flintmc.net/api/client-store/get-index with Ipv4
+[13:46:23] [renderer] Got i18n
+[13:46:23] [renderer] received setup configuration: {"acceptedTos":false,"selectedTheme":false}
+[13:46:24] [main] WEB: [200] [1,995ms] https://releases.r2.labymod.net/api/v1/launcher/meta.json, body: {"runtimeUrl":"https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7...
+[13:46:24] [main] Writing /home/*****/.config/LabyMod/launcher-meta.json
+[13:46:24] [main] WEB: Fetching GET@https://releases.labymod.net/api/v1/launcher/meta with Ipv4
+[13:46:24] [main] Release channels initialized
+[13:46:24] [main] Setting controller initialized
+[13:46:24] [main] Loaded accounts
+[13:46:24] [main] Account manager initialized
+[13:46:24] [renderer] start loading
+[13:46:24] [main] WEB: Fetching GET@https://releases.r2.labymod.net/api/v1/manifest/production/latest.json with Ipv4
+[13:46:24] [main] WEB: [200] [2,360ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[13:46:25] [main] WEB: [200] [2,172ms] https://flintmc.net/api/client-store/get-index, body: [{"name":"OptiFine","namespace":"optifine","short_description":"See OptiFine Capes, use HD texture p...
+[13:46:25] [main] Failed to save cache for /home/*****/.minecraft/labymod-neo/cache/index.json
+[13:46:25] [main] Error: ENOENT: no such file or directory, open '/home/*****/.minecraft/labymod-neo/cache/index.json'
+[13:46:25] [main] Checking modloader compatabilityfabric to 1.16.5<*
+[13:46:25] [main] Updating modloader compatabilityfabric to 1.16.5<*
+[13:46:25] [main] Checking modloader compatabilityforge to 1.8.9
+[13:46:25] [main] Updating modloader compatabilityforge to 1.8.9
+[13:46:25] [renderer] Updating modloader compatability {"loader":"fabric","versions":"1.16.5<*"}
+[13:46:25] [renderer] Updating modloader compatability {"loader":"forge","versions":"1.8.9"}
+[13:46:25] [main] WEB: [200] [2,216ms] https://releases.r2.labymod.net/launcher/api/v1/modmeta.json, body: {"recommended":{"fabric":[],"forge":[]},"incompatible":{"fabric":["immediatelyfast","essential","cha...
+[13:46:25] [main] WEB: [200] [2,292ms] https://laby.net/api/v3/web/blog?amount=10&language=en&content=false, body: {"articles":[{"published_at":"2024-07-01T16:17:34","updated_at":"2024-07-01T16:16:33","title":"Footb...
+[13:46:25] [main] WEB: [200] [1,497ms] https://releases.r2.labymod.net/api/v1/manifest/production/latest.json, body: {"labyModVersion":"4.2.32","commitReference":"f8294221","sha1":"715a08d680af72c6410316da70d7c650b430...
+[13:46:25] [main] Writing /home/*****/.config/LabyMod/production/labymod-manifest.json
+[13:46:25] [main] WEB: Fetching GET@https://dl.labymod.net/server_groups.json with Ipv4
+[13:46:25] [main] Launcher initialized
+[13:46:25] [main] Downloader initialized
+[13:46:25] [main] WEB: Fetching GET@https://releases.r2.labymod.net/launcher/api/v1/modmeta.json with Ipv4
+[13:46:25] [main] Addons initialized
+[13:46:25] [main] Mods initialized
+[13:46:25] [main] Services initialized
+[13:46:25] [renderer] stop loading
+[13:46:25] [main] Loading TOS
+[13:46:25] [main] WEB: Fetching GET@https://dl.labymod.net/latest/documents/tos.txt with Ipv4
+[13:46:25] [main] Failed to login to Discord RPC: Error: Could not connect
+[13:46:25] [main] Sending analytics for 85588a35aec0550a594fbe3b6f929cfec6239d2eb2f4e32fd75dc1cec8c84e9f
+[13:46:25] [main] {"version":"2.1.5","platform":{"name":"linux","arch":"x64","version":"6.9.9-arch1-1"},"locale":"zh-CN","country":"CN"}
+[13:46:25] [main] WEB: Fetching POST@https://releases.labymod.net/api/v2/launcher/analytics with Ipv4
+[13:46:26] [main] WEB: [200] [3,296ms] https://laby.net/api/v3/web/blog?amount=10&language=en&content=false, body: {"articles":[{"published_at":"2024-07-01T16:17:34","updated_at":"2024-07-01T16:16:33","title":"Footb...
+[13:46:26] [main] WEB: [200] [2,227ms] https://releases.labymod.net/api/v1/launcher/meta, body: {"runtimeUrl":"https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7...
+[13:46:26] [main] Got launcher meta from releaser {"runtimeUrl":"https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json","defaultVersion":"1.20.6","releaseChannels":[{"id":"production","staffOnly":false,"endpoint":"https://laby-releases.s3.de.io.cloud.ovh.net/"},{"id":"snapshot","staffOnly":false,"endpoint":"https://laby-releases.s3.de.io.cloud.ovh.net/"},{"id":"internal","staffOnly":true,"endpoint":"https://releases.labymod.net/"}],"defaultReleaseChannel":"production"}
+[13:46:27] [main] WEB: [200] [1,220ms] https://dl.labymod.net/latest/documents/tos.txt, body: *** End-User License Agreement ("Agreement") ***Last updated: January 04, 2023Please read this End-U...
+[13:46:27] [main] WEB: [200] [1,883ms] https://releases.r2.labymod.net/launcher/api/v1/modmeta.json, body: {"recommended":{"fabric":[],"forge":[]},"incompatible":{"fabric":["immediatelyfast","essential","cha...
+[13:46:27] [main] WEB: [200] [1,749ms] https://dl.labymod.net/server_groups.json, body: {"server_groups":{"timolia":{"server_name":"timolia","nice_name":"Timolia","direct_ip":"play.timolia...
+[13:46:27] [main] servers.dat not found
+[13:46:49] [main] Second instance started with arguments: /tmp/.mount_labymoKI3tqr/labymodlauncher --allow-file-access-from-files --ozone-platform=wayland
+[13:46:49] [main] Parsed quick launch arguments: undefined undefined undefined
+[13:47:24] [main] accounts.json has not changed.
+[13:48:24] [main] accounts.json has not changed.
+[13:49:24] [main] accounts.json has not changed.
+[13:50:24] [main] accounts.json has not changed.
+[13:51:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[13:51:23] [main] WEB: [200] [1,890ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[13:51:24] [main] accounts.json has not changed.
+[13:52:24] [main] accounts.json has not changed.
+[13:53:24] [main] accounts.json has not changed.
+[13:54:24] [main] accounts.json has not changed.
+[13:55:24] [main] accounts.json has not changed.
+[13:56:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[13:56:23] [main] WEB: [200] [1,953ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[13:56:24] [main] accounts.json has not changed.
+[13:57:24] [main] accounts.json has not changed.
+[13:58:24] [main] accounts.json has not changed.
+[13:59:24] [main] accounts.json has not changed.
+[14:00:24] [main] accounts.json has not changed.
+[14:01:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:01:23] [main] WEB: [200] [2,042ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:01:24] [main] accounts.json has not changed.
+[14:02:24] [main] accounts.json has not changed.
+[14:03:24] [main] accounts.json has not changed.
+[14:04:24] [main] accounts.json has not changed.
+[14:05:24] [main] accounts.json has not changed.
+[14:06:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:06:24] [main] WEB: [200] [2,885ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:06:24] [main] accounts.json has not changed.
+[14:07:24] [main] accounts.json has not changed.
+[14:08:24] [main] accounts.json has not changed.
+[14:09:24] [main] accounts.json has not changed.
+[14:10:24] [main] accounts.json has not changed.
+[14:11:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:11:23] [main] WEB: [200] [2,502ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:11:24] [main] accounts.json has not changed.
+[14:12:24] [main] accounts.json has not changed.
+[14:13:24] [main] accounts.json has not changed.
+[14:14:24] [main] accounts.json has not changed.
+[14:15:24] [main] accounts.json has not changed.
+[14:16:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:16:24] [main] accounts.json has not changed.
+[14:16:24] [main] WEB: [200] [3,143ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:17:24] [main] accounts.json has not changed.
+[14:18:24] [main] accounts.json has not changed.
+[14:19:24] [main] accounts.json has not changed.
+[14:20:24] [main] accounts.json has not changed.
+[14:21:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:21:24] [main] accounts.json has not changed.
+[14:21:24] [main] WEB: [200] [3,481ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:22:24] [main] accounts.json has not changed.
+[14:23:24] [main] accounts.json has not changed.
+[14:24:24] [main] accounts.json has not changed.
+[14:25:24] [main] accounts.json has not changed.
+[14:26:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:26:23] [main] WEB: [200] [2,179ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:26:24] [main] accounts.json has not changed.
+[14:27:24] [main] accounts.json has not changed.
+[14:28:24] [main] accounts.json has not changed.
+[14:29:24] [main] accounts.json has not changed.
+[14:30:24] [main] accounts.json has not changed.
+[14:31:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:31:22] [main] WEB: [200] [1,371ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:31:24] [main] accounts.json has not changed.
+[14:32:24] [main] accounts.json has not changed.
+[14:33:24] [main] accounts.json has not changed.
+[14:34:24] [main] accounts.json has not changed.
+[14:35:24] [main] accounts.json has not changed.
+[14:36:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:36:23] [main] WEB: [200] [2,012ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:36:24] [main] accounts.json has not changed.
+[14:37:24] [main] accounts.json has not changed.
+[14:38:24] [main] accounts.json has not changed.
+[14:39:24] [main] accounts.json has not changed.
+[14:40:24] [main] accounts.json has not changed.
+[14:41:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:41:23] [main] WEB: [200] [2,092ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:41:24] [main] accounts.json has not changed.
+[14:42:24] [main] accounts.json has not changed.
+[14:43:24] [main] accounts.json has not changed.
+[14:44:24] [main] accounts.json has not changed.
+[14:45:24] [main] accounts.json has not changed.
+[14:46:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:46:24] [main] WEB: [200] [2,733ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:46:24] [main] accounts.json has not changed.
+[14:47:24] [main] accounts.json has not changed.
+[14:48:24] [main] accounts.json has not changed.
+[14:49:24] [main] accounts.json has not changed.
+[14:50:24] [main] accounts.json has not changed.
+[14:51:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:51:23] [main] WEB: [200] [2,109ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:51:24] [main] accounts.json has not changed.
+[14:52:24] [main] accounts.json has not changed.
+[14:53:24] [main] accounts.json has not changed.
+[14:54:24] [main] accounts.json has not changed.
+[14:55:24] [main] accounts.json has not changed.
+[14:56:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[14:56:22] [main] WEB: [200] [1,420ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[14:56:24] [main] accounts.json has not changed.
+[14:57:24] [main] accounts.json has not changed.
+[14:58:24] [main] accounts.json has not changed.
+[14:59:24] [main] accounts.json has not changed.
+[15:00:24] [main] accounts.json has not changed.
+[15:01:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:01:22] [main] WEB: [200] [1,440ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:01:24] [main] accounts.json has not changed.
+[15:02:24] [main] accounts.json has not changed.
+[15:03:24] [main] accounts.json has not changed.
+[15:04:24] [main] accounts.json has not changed.
+[15:05:24] [main] accounts.json has not changed.
+[15:06:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:06:22] [main] WEB: [200] [1,467ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:06:24] [main] accounts.json has not changed.
+[15:07:24] [main] accounts.json has not changed.
+[15:08:24] [main] accounts.json has not changed.
+[15:09:24] [main] accounts.json has not changed.
+[15:10:24] [main] accounts.json has not changed.
+[15:11:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:11:22] [main] WEB: [200] [1,301ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:11:24] [main] accounts.json has not changed.
+[15:12:24] [main] accounts.json has not changed.
+[15:13:24] [main] accounts.json has not changed.
+[15:14:24] [main] accounts.json has not changed.
+[15:15:24] [main] accounts.json has not changed.
+[15:16:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:16:23] [main] WEB: [200] [1,727ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:16:24] [main] accounts.json has not changed.
+[15:17:24] [main] accounts.json has not changed.
+[15:18:24] [main] accounts.json has not changed.
+[15:19:24] [main] accounts.json has not changed.
+[15:20:24] [main] accounts.json has not changed.
+[15:21:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:21:23] [main] WEB: [200] [2,471ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:21:24] [main] accounts.json has not changed.
+[15:22:24] [main] accounts.json has not changed.
+[15:23:24] [main] accounts.json has not changed.
+[15:24:24] [main] accounts.json has not changed.
+[15:25:24] [main] accounts.json has not changed.
+[15:26:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:26:22] [main] WEB: [200] [860ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:26:24] [main] accounts.json has not changed.
+[15:27:24] [main] accounts.json has not changed.
+[15:28:24] [main] accounts.json has not changed.
+[15:29:24] [main] accounts.json has not changed.
+[15:30:24] [main] accounts.json has not changed.
+[15:31:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:31:23] [main] WEB: [200] [1,991ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:31:24] [main] accounts.json has not changed.
+[15:32:24] [main] accounts.json has not changed.
+[15:33:24] [main] accounts.json has not changed.
+[15:34:24] [main] accounts.json has not changed.
+[15:35:24] [main] accounts.json has not changed.
+[15:36:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:36:23] [main] WEB: [200] [2,453ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:36:24] [main] accounts.json has not changed.
+[15:37:24] [main] accounts.json has not changed.
+[15:38:24] [main] accounts.json has not changed.
+[15:39:24] [main] accounts.json has not changed.
+[15:40:24] [main] accounts.json has not changed.
+[15:41:21] [main] WEB: Fetching GET@https://releases-launcher.labymod.net/update/linux/2.1.5/stable/ with Ipv4
+[15:41:24] [main] accounts.json has not changed.
+[15:41:25] [main] WEB: [200] [3,499ms] https://releases-launcher.labymod.net/update/linux/2.1.5/stable/, body: 2.1.6...
+[15:42:11] [main] LabyMod is not running, so we can quit

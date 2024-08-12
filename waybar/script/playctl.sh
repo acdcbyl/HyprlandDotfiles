@@ -39,20 +39,21 @@
 # fi
 #!/bin/bash
 
-play_icon=" "
-pause_icon=" "
-stop_icon=" "
+#play_icon=""
+#play_icon=<span foreground='#bb9af7'></span>
+#pause_icon=<span foreground='#bb9af7'></span>
+#stop_icon=" "
 
 if playerctl status >/dev/null 2>&1; then
     player_status=$(playerctl status)
     if [[ $player_status == "Playing" ]]; then
-        echo '{"text": "'"$play_icon $(playerctl metadata title)"'", "class": "Playing"}'
+        echo '{"text": "'"<span foreground='#bb9af7'></span>   $(playerctl metadata title)"'", "class": "Playing"}'
     elif [[ $player_status == "Paused" ]]; then
-        echo '{"text": "'"$pause_icon $(playerctl metadata title)"'", "class": "Paused"}'
+        echo '{"text": "'"<span foreground='#bb9af7'></span>   $(playerctl metadata title)"'", "class": "Paused"}'
     else
-        echo '{"text": "'"未在播放"'", "class": "Stopped"}'
+        echo '{"text": "'"<span foreground='#bb9af7'> </span> 未在播放"'", "class": "Stopped"}'
     fi
 else
-    echo '{"text": "'"未在播放"'", "class": "Stopped"}'
+    echo '{"text": "'"<span foreground='#bb9af7'> </span> 未在播放"'", "class": "Stopped"}'
 fi
 #$(playerctl metadata artist) -

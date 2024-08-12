@@ -1,0 +1,598 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+ @import "mocha.css";
+
+ @keyframes blink-warning {
+     70% {
+         color: white;
+     }
+
+     to {
+         color: white;
+         background-color: orange;
+     }
+ }
+
+ @keyframes blink-critical {
+     70% {
+       color: white;
+     }
+
+     to {
+         color: white;
+         background-color: @red;
+     }
+ }
+
+
+ /* -----------------------------------------------------------------------------
+  * Base styles
+  * -------------------------------------------------------------------------- */
+
+ /* Reset all styles */
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: JetBrainsMono Nerd Font;
+     font-size: 14px;
+     font-weight: bold;
+     background-color: transparent;
+ }
+
+ /* The whole bar */
+ window#waybar {
+     /*background: @crust;*/
+     background:transparent;
+     /* background: #1a1c2b;
+     padding-right: 5px;
+     padding-left: 5px;
+     margin-left: 10px;
+     margin-right: 10px;
+     border-radius: 15px 15px 15px 15px;
+     border: 3px solid @mauve;
+     margin-top: 5px; */
+     /* color: @text; */
+
+ }
+
+ .modules-right {
+    /* border-bottom: 1px solid @crust; */
+    /* spadding-left: 2px; */
+    padding-right: 5px;
+    margin-right: 10px;
+    border-radius: 15px 15px 15px 15px;
+    border: 3px solid @mauve;
+    margin-top: 5px;
+    background: #1a1c2b;
+  }
+
+  .modules-center {
+    /* border-bottom: 1px solid @crust; */
+    padding: 0 3px;
+    margin-top: 5px;
+    border-radius: 15px 15px 15px 15px;
+    border: 3px solid @mauve;
+    background: #1a1c2b;
+  }
+
+  .modules-left {
+    /* border-bottom: 1px solid @crust; */
+    border-radius: 15px 15px 15px 15px;
+    border: 3px solid @mauve;
+    padding-left: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background: #1a1c2b;
+  }
+
+
+ /* Each module */
+ #battery,
+ #cpu,
+ #custom-keyboard-layout,
+ #memory,
+ #mode,
+ #network,
+ #pulseaudio,
+ #temperature,
+ #disk,
+ #keyboard-state,
+ #custom-fcitx5,
+ #submap,
+ #custom-icon,
+ #bluetooth {
+     margin: 5px;
+     padding-left: 10px;
+     padding-right: 10px;
+
+     border-radius: 1rem;
+     /*background: @surface0;*/
+ }
+
+ /* -----------------------------------------------------------------------------
+  * Module styles
+  * -------------------------------------------------------------------------- */
+
+ #battery {
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+ }
+
+ #battery.warning {
+     color: orange;
+ }
+
+ #battery.critical {
+     color: red;
+ }
+
+ #battery.warning.discharging {
+     animation-name: blink-warning;
+     animation-duration: 3s;
+ }
+
+ #battery.critical.discharging {
+     animation-name: blink-critical;
+     animation-duration: 2s;
+ }
+
+ #clock {
+     padding-left: 10px;
+     padding-right: 10px;
+     background: #2a2d45;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: 10px;
+     font-weight: bold;
+     border-radius: 5px 5px 5px 5px;
+ }
+
+ #clock.date {
+    color: @maroon;
+    border-radius: 5px 0px 0px 5px
+ }
+
+ #clock.time {
+    color: @peach;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 20px;
+ }
+
+ #cpu {
+     color: @maroon;
+     background: #2a2d45;
+     margin-right: 0;
+     margin-left: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding: 0px 10px 0px 12px;
+     border-radius: 5px 0px 0px 5px;
+     /* background-color: @blue; */
+ }
+
+ #cpu.warning {
+    background: #2a2d45;
+    margin-right: 0;
+     margin-left: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+    padding: 0px 10px 0px 12px;
+     color: @pink;
+    /* background-color: @pink; */
+ }
+
+ #cpu.critical {
+    background: #2a2d45;
+    margin-right: 0;
+     margin-left: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+    padding: 0px 10px 0px 12px;
+     color: @red;
+     /* background-color: @red; */
+ }
+
+ #temperature {
+    background: #2a2d45;
+     color: @green;
+     /* margin-right: 0; */
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: 0;
+     background: #2a2d45;
+     padding: 0px 12px 0px 0px;
+     border-radius: 0px 5px 5px 0px;
+     /* background-color: @green; */
+ }
+
+ #temperature.critical {
+    background: #2a2d45;
+    padding: 0px 12px 0px 0px;
+    color: @red;
+    margin-top: 10px;
+     margin-bottom: 10px;
+    /* margin-right: 0; */
+     margin-left: 0;
+     /* background-color: @red; */
+ }
+
+ #custom-dot {
+    color: #6e738d;
+    padding-right: 10px;
+    background-color: transparent;
+  }
+
+ #memory {
+    background: #2a2d45;
+     color: @sapphire;
+     margin-right: 0;
+     margin-left: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding: 0px 10px 0px 0px;
+     border-radius: 0px 0px 0px 0px;
+     /* background-color: @sapphire; */
+ }
+
+ #memory.warning {
+    background: #2a2d45;
+    margin-right: 0;
+     margin-left: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+    padding: 0px 10px 0px 0px;
+    color: @pink;
+    border-radius: 0px 0px 0px 0px;
+     /* background-color: @pink; */
+ }
+
+ #memory.critical {
+    background: #2a2d45;
+    margin-right: 0;
+     margin-left: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+    padding: 0px 10px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    color: @red;
+     /* background-color: @red; */
+ }
+
+ #mode {
+     color: @red;
+     border-top: 2px solid white;
+     padding-bottom: 2px;
+ }
+
+ #network {
+     color: @yellow;
+     background: #2a2d45;
+     margin-right: 0;
+      margin-left: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+     padding: 0px 10px 0px 0px;
+     border-radius: 0px 0px 0px 0px;
+ }
+
+ #network.disconnected {
+     color: @red;
+     background: #2a2d45;
+     margin-right: 0;
+      margin-left: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+     padding: 0px 10px 0px 0px;
+     border-radius: 0px 0px 0px 0px;
+ }
+
+ #keyboard-state label {
+     color: @blue;
+ }
+
+ #keyboard-state label.locked {
+     color: @red;
+ }
+
+ #pulseaudio {
+    /* margin-left:10px; */
+    padding: 0px 0px 0px 0px;
+     color: @blue;
+ }
+
+ #pulseaudio.muted {
+     color: @red;
+ }
+
+ #bluetooth {
+     color: @blue;
+ }
+
+ #bluetooth.disabled {
+     color: @red;
+ }
+
+ #bluetooth.connected {
+     color: @green;
+ }
+
+ #disk {
+    padding: 0px 10px 0px 0px;
+     color: @sapphire;
+     background: #2a2d45;
+     margin-right: 0;
+      margin-left: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+     padding: 0px 10px 0px 0px;
+     border-radius: 0px 0px 0px 0px;
+ }
+
+ #battery {
+    margin-left: 0;
+    padding-right: 10px;
+    color: @green;
+ }
+
+ #tray {
+     margin: 10px;
+     padding-left: 10px;
+     padding-right: 10px;
+ }
+
+ #window {
+     font-weight: bold;
+ }
+ #workspaces button:nth-child(1) label {
+    color: #8aadf4;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(2) label {
+    color: #ed8796;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(3) label {
+    color: #a6da95;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(4) label {
+    color: #c6a0f6;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(5) label {
+    color: #f4dbd6;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(6) label {
+    color: #f5a97f;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(7) label {
+    color: #8bd5ca;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(8) label {
+    color: #68b0d6;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+
+  #workspaces button:nth-child(9) label {
+    color: #aab1d3;
+    margin: 0px 8px;
+    background-color: transparent;
+  }
+  #workspaces button:hover label {
+    padding: 0 8px;
+    margin: 0;
+}
+  #workspaces button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    transition: none;
+}
+ #workspaces button:hover {
+    margin: 0px 0px;
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    transition: none;
+    border: none;
+    outline: none;
+}
+button:hover {
+    margin: 0px 0px;
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    transition: none;
+}
+
+#tray menu {
+    color: @text;
+    background-color: #1a1c2b;  /* 使用与其他模块相同的背景色 */
+    border: 2px solid #6e738d;  /* 添加边框以增加可见性 */
+    border-radius: 5px 5px 5px 5px;
+}
+
+#custom-playerctl.Playing {
+    padding-left: 10px;
+    padding-right: 10px;
+    /* background: #2a2d45; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    /* background-color: #46c880; */
+    color: @green;
+}
+
+#custom-playerctl.Paused {
+    padding-left: 10px;
+    padding-right: 10px;
+    /* background: #2a2d45; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    /* background-color: #cdd6f4; */
+    color: @yellow;
+}
+
+#custom-playerctl.Stopped {
+    padding-left: 10px;
+    padding-right: 10px;
+    /* background: #2a2d45; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    /* background-color: #f7768e; */
+    color: @flamingo;
+}
+ /* #workspaces button {
+     color: @text;
+
+
+     border-radius: 0.5rem;
+     margin: 5px;
+
+     padding-bottom: 2px;
+     padding-left: 10px;
+     padding-right: 10px;
+ }
+
+ #workspaces button.active {
+     color: @base;
+     background-color: @lavender;
+ }
+
+ button:hover {
+     box-shadow: none;
+     text-shadow: none;
+     background: none;
+     transition: none;
+ }
+
+ #workspaces button.urgent {
+     color: @base;
+     background-color: @red;
+ } */
+
+ #submap {
+     color: @base;
+     background-color: @red;
+ }
+
+ tooltip {
+     background: @base;
+     border: 1px solid @pink;
+     border-radius: 0.5rem;
+ }
+
+ tooltip label {
+     color: @text;
+ }
+
+ #custom-icon {
+     background-color: transparent;
+     font-size: 20px;
+     padding-right: 10px;
+     color: @flamingo;
+ }
+ #custom-power {
+    font-size: 20px;
+    color: @red;
+ }
+ #custom-filler {
+    color: #6e738d;
+    padding-left: 0px;
+    padding-right: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  #custom-fillerl {
+    color: #6e738d;
+    padding-left: 9px;
+    padding-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  #custom-playerctl {
+    color: @text;
+  }
+  /* #custom-brightness {
+      background-color: #64727D;
+      color: #ffffff;
+      padding: 0 10px;
+      margin: 0 5px;
+      border-radius: 10px;
+  } */
+  #custom-brightness {
+     background: #2a2d45;
+      color: @sky;
+      /* padding: 0 10px;
+      border-radius: 10px; */
+       margin-right: 0;
+       margin-left: 0;
+       margin-top: 10px;
+       margin-bottom: 10px;
+      padding: 0px 10px 0px 0px;
+      border-radius: 0px 0px 0px 0px;
+  }
+  #pulseaudio-slider slider {
+      min-height: 0px;
+      min-width: 0px;
+      opacity: 0;
+      background-image: none;
+      border: none;
+      box-shadow: none;
+  }
+
+  #pulseaudio-slider trough {
+      min-height: 6px;  /* 减小高度 */
+      min-width: 80px;   /* 增加宽度，使滑块变长 */
+      border-radius: 5px;
+      background-color: white;  /* 更改底色为白色 */
+      margin-right: 10px;
+  }
+
+  #pulseaudio-slider highlight {
+      min-height: 6px;  /* 设置与 trough 相同的高度 */
+      border-radius: 5px;
+      background: #89b4fa;  /* 更改滑块颜色为紫色 */
+  }

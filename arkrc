@@ -1,6 +1,6 @@
 [ExtractDialog]
 1920x1080 screen: Window-Maximized=true
-DirHistory[$e]=$HOME/.config/easyeffects/output/,/usr/share/sddm/themes/,$HOME/Downloads/,$HOME/.icons/,$HOME/.icon/,$HOME/Downloads/hyprdots-main/Configs/
+DirHistory[$e]=$HOME/Downloads/,$HOME/.config/easyeffects/output/,/usr/share/sddm/themes/,$HOME/.icons/,$HOME/.icon/,$HOME/Downloads/hyprdots-main/Configs/
 
 [General]
 LockSidebar=true

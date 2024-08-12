@@ -10,4 +10,7 @@
   <property name="last-side-pane" type="string" value="ThunarShortcutsPane"/>
   <property name="last-image-preview-visible" type="bool" value="false"/>
   <property name="last-show-hidden" type="bool" value="true"/>
+  <property name="last-splitview-separator-position" type="int" value="861"/>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
 </channel>
